@@ -10,9 +10,6 @@ public class AmmoPickUp : NetworkBehaviour {
     public AudioClip sound;
     PickUpState pickUpState;
 
-    public int count = 0;
-    public int onHold = 0;
-    public GameObject ammoPoints;
     //public Text CountText;
 
     // Start is called before the first frame update
@@ -23,7 +20,7 @@ public class AmmoPickUp : NetworkBehaviour {
 
     // Update is called once per frame
     void Update() {
-        ChangeAmmoPackText();
+
     }//End of update
 
     //If player comes in contact with ammunition
@@ -37,9 +34,12 @@ public class AmmoPickUp : NetworkBehaviour {
             // calls function to tell server which player got the ammo
             CmdTellServerWhoGotAmmo(id, 6);
 
+            string id2 = other.transform.name;
+            CmdTellServerWhoGotAmmoPack(id2, 1);
+
             pickUpState.AmmoPickUp();
 
-            Destroy(gameObject);
+            Destroy(gameObject, 0);
 
             AudioSource.PlayClipAtPoint(sound, this.gameObject.transform.position);
         }//End of if Statement
@@ -54,11 +54,12 @@ public class AmmoPickUp : NetworkBehaviour {
         go.GetComponent<GunScript>().addAmmo(amount);
     }//End of CmdTellServerWhoGotAmmo
 
-    //Print ammo pack in GUI
-    //Place the obeject
-    public void ChangeAmmoPackText() {
-        if (isLocalPlayer) {
-            ammoPoints.GetComponent<Text>().text = "Ammo Pack(s):  " + onHold;
-        }//End of if statement
-    }//End of ChangeAmmoPackText
+    [Command]
+    void CmdTellServerWhoGotAmmoPack(string id, int amount2) {
+        print("I GO HERE");
+        GameObject go = GameObject.Find(id);
+
+        go.GetComponent<Inventory>().AddAmmoPack(amount2);
+    }//End of CmdTellServerWhoGotAmmoPack
+
 }//End of AmmoPickUP

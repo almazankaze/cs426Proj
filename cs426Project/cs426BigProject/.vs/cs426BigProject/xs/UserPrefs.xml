@@ -1,15 +1,13 @@
 ﻿<Properties StartupConfiguration="{8B0606AA-BBD0-1977-A688-B62A8DA50C93}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Shaders/JTShader.shader">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemS/Inventory.cs">
     <Files>
-      <File FileName="Assets/Scripts/TerrainScripts/SunRotation.cs" Line="19" Column="39" />
-      <File FileName="Assets/Scripts/TerrainScripts/CatAI.cs" Line="64" Column="47" />
-      <File FileName="Assets/Scripts/PlayerScripts/PlayerController.cs" Line="168" Column="1" />
-      <File FileName="Assets/Scripts/PlayerScripts/GunScript.cs" Line="35" Column="18" />
-      <File FileName="Assets/Scripts/ItemS/AmmoPickUp.cs" Line="58" Column="24" />
-      <File FileName="Assets/Scripts/ItemS/HealthPickUp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ItemS/WoodPickUp.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PausedMenu.cs" Line="23" Column="53" />
-      <File FileName="Assets/Shaders/JTShader.shader" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PickUpState.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ItemS/AmmoPickUp.cs" Line="43" Column="1" />
+      <File FileName="Assets/Scripts/ItemS/WoodPickUp.cs" Line="27" Column="1" />
+      <File FileName="Assets/Scripts/ItemS/HealthPickUp.cs" Line="28" Column="51" />
+      <File FileName="Assets/Scripts/ItemS/Inventory.cs" Line="19" Column="41" />
+      <File FileName="Assets/Shaders/johnShader.shader" Line="33" Column="11" />
+      <File FileName="Assets/Shaders/JTShader.shader" Line="4" Column="50" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -18,13 +16,13 @@
             <Node name="Assets" expanded="True">
               <Node name="ReadMe" expanded="True" />
               <Node name="Scripts" expanded="True">
-                <Node name="ItemS" expanded="True" />
+                <Node name="ItemS" expanded="True">
+                  <Node name="Inventory.cs" selected="True" />
+                </Node>
                 <Node name="PlayerScripts" expanded="True" />
                 <Node name="TerrainScripts" expanded="True" />
               </Node>
-              <Node name="Shaders" expanded="True">
-                <Node name="JTShader.shader" selected="True" />
-              </Node>
+              <Node name="Shaders" expanded="True" />
             </Node>
           </Node>
         </State>
@@ -33,7 +31,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="690cf994-1235-4c67-8e6e-f41e9ebd6800" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="97a5354b-8cd0-46ae-897a-4717119317d8" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
