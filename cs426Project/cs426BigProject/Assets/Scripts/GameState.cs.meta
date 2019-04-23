@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a8d24e87e6265f4d90085c54dad7f2c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - gameOverAnim: {instanceID: 0}
+  - gameOversound: {instanceID: 0}
+  - gameoverCanvas: {fileID: 5893193406590964922, guid: f2784a74a27cd2a4d92c5ecd7fa62aba,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

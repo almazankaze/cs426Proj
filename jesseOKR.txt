@@ -1,0 +1,5 @@
+Schedule and deliverable:
+	Implement a timer  -- Tuesday by 11pm (estimate: 2 hours)
+	Monster appears -- Tuesday by 11pm (estimate: 2 hours)
+	Monster to follow player -- Saturday by 11pm (estimated: 3 hours)
+	

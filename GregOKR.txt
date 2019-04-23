@@ -1,0 +1,5 @@
+Schedule and deliverable:
+	Map layout prototype  -- Tuesday by 11pm (estimate: 3 hours)
+	Items and pick functionality -- Tuesday by 11pm (estimate: 2 hours)
+	Design Document part 2 -- Monday 5pm by 11pm (estimated: 1 hour)
+	

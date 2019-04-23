@@ -1,0 +1,7 @@
+
+Schedule and deliverable:
+	
+	Player controller that walks and jumps -- Thur by 11pm (estimate: 2 hrs)
+	Simple gun that shoots -- Sat by 11pm (estimate: 3 hrs)
+	Simple networking that works with 2 players -- Sat by 5pm (estimate: 3 hrs)
+	
