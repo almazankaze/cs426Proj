@@ -42,6 +42,12 @@ public class PlayerHealth : NetworkBehaviour
         health -= dmg;
     }
 
+    // add health to player
+    public void AddHealth(int hlth)
+    {
+        health += hlth;
+    }
+
     // whenever health changes, update text and health
     void OnHealthChanged(int hlth)
     {

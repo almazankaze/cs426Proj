@@ -38,7 +38,7 @@ public class Inventory : NetworkBehaviour {
         if (isLocalPlayer)
         {
             // changes the number of wood item to display
-            woodDisplay.GetComponent<Text>().text = "Wood: " + woodAmount;
+            woodDisplay.GetComponent<Text>().text = "E Wood: " + woodAmount;
         }
     }
 
@@ -89,7 +89,7 @@ public class Inventory : NetworkBehaviour {
     public void ChangeHealthPackText() {
         if (isLocalPlayer) {
             // changes the number of ammo pack item to display
-            HealthPackDisplay.GetComponent<Text>().text = "Health Packs: " + HealthPackAmount;
+            HealthPackDisplay.GetComponent<Text>().text = "G Health Packs: " + HealthPackAmount;
         }
     }
 
@@ -109,6 +109,9 @@ public class Inventory : NetworkBehaviour {
     {
         // check if using wood item
         IsUsingWoodItem();
+
+        // check if using health pack
+        IsUsingHealthPack();
     }
 
     void IsUsingWoodItem()
@@ -134,9 +137,50 @@ public class Inventory : NetworkBehaviour {
 
         void ShootWood()
         {
-            Quaternion playerRotation = player.transform.rotation;
-            Instantiate(woodItem, transform.position + (transform.forward * 2), playerRotation);
+            GameObject g = Instantiate(woodItem, transform.position + (transform.forward * 2), Quaternion.identity);
+            g.transform.Rotate(90, 0, 0);
         }
     }
+
+    // check if using the health item
+    void IsUsingHealthPack()
+    {
+        if (!isLocalPlayer)
+            return;
+
+        // if pressing the g button and has packs
+        if (Input.GetKeyDown(KeyCode.G) && HealthPackAmount > 0)
+        {
+
+            UsePack();
+
+            // take away one pack from health
+            HealthPackAmount -= 1;
+
+            // no negative apacks
+            if (HealthPackAmount <= 0)
+                HealthPackAmount = 0;
+
+            ChangeHealthPackText();
+        }
+    }
+
+    // use health pack
+    void UsePack()
+    {
+        // get id of player that used health pack
+        string id = transform.name;
+        CmdTellServerWhoUsedPack(id, 50);
+    }
+
+    [Command]
+    void CmdTellServerWhoUsedPack(string id, int amount)
+    {
+        // find player with id that got shot
+        GameObject go = GameObject.Find(id);
+
+        // that player takes damage
+        go.GetComponent<PlayerHealth>().AddHealth(amount);
+    }//End of CmdTellServerWhoGotAmmo
 
 }//End of Inventory
