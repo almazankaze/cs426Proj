@@ -14,6 +14,7 @@ public class PlayerController : NetworkBehaviour
     private float walkSpeed = 5.0f;
     private float runSpeed = 11.0f;
     private float runSpeedBuildUp = 3.0f;
+    Stamina myStamina;
     [SerializeField] private KeyCode runKey;
 
     // variable to hold current move speed
@@ -42,6 +43,8 @@ public class PlayerController : NetworkBehaviour
     {
         // get player character controller
         control = GetComponent<CharacterController>();
+
+        myStamina = GetComponent<Stamina>();
     }
 
     // executes every frame
@@ -95,6 +98,14 @@ public class PlayerController : NetworkBehaviour
         // is walking
         else
             currentSpeed = Mathf.Lerp(currentSpeed, walkSpeed, Time.deltaTime * runSpeedBuildUp);
+
+        // is running, take away stamina
+        if (currentSpeed >= 6 && running)
+            myStamina.deductStamina();
+        else
+        {
+            myStamina.AddStamina();
+        }
 
         // makes player jump
         JumpInput();

@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerID.cs" />
+    <Compile Include="Assets\Scripts\PlayerScripts\Stamina.cs" />
     <Compile Include="Assets\Scripts\TerrainScripts\CatAI.cs" />
     <Compile Include="Assets\Scripts\TerrainScripts\SunRotation.cs" />
     <Compile Include="Assets\Scripts\TextBox.cs" />

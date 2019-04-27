@@ -116,7 +116,7 @@ MonoBehaviour:
   m_MinSize: {x: 913, y: 444}
   m_MaxSize: {x: 22008, y: 10022}
   vertical: 0
-  controlID: 153
+  controlID: 53
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -382,14 +382,14 @@ MonoBehaviour:
   m_ShowContextualTools: 0
   m_WindowGUID: 1a2e3afa7c6fc4545b6516ea392748dd
   m_Gizmos: 1
-  m_SceneIsLit: 0
+  m_SceneIsLit: 1
   m_SceneLighting: 1
   m_2DMode: 0
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -1.4898512, y: 1.1513367, z: 0.5364685}
+    m_Target: {x: 0, y: 0, z: 0}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0}
   m_RenderMode: 0
@@ -420,11 +420,11 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.12379661, y: 0.07761461, z: -0.009713585, w: 0.98922175}
+    m_Target: {x: 0.018138954, y: -0.8281138, z: 0.02684009, w: 0.5596351}
     speed: 2
     m_Value: {x: 0.018138833, y: -0.82810825, z: 0.026839912, w: 0.55963135}
   m_Size:
-    m_Target: 4.177989
+    m_Target: 22
     speed: 2
     m_Value: 22
   m_Ortho:
@@ -480,9 +480,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: c2c60000
-      m_LastClickedID: 50882
-      m_ExpandedIDs: 88b6ffffc0c60000
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 8efbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -629,7 +629,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -637,7 +637,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 776}
+    m_ScrollPosition: {x: 0, y: 594}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 112
 --- !u!114 &16
