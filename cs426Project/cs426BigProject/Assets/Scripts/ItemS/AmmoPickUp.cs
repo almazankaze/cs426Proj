@@ -34,9 +34,6 @@ public class AmmoPickUp : NetworkBehaviour {
             // calls function to tell server which player got the ammo
             CmdTellServerWhoGotAmmo(id, 6);
 
-            //string id2 = other.transform.name;
-            //CmdTellServerWhoGotAmmoPack(id2, 1);
-
             pickUpState.AmmoPickUp();
 
             Destroy(gameObject, 0);
@@ -53,13 +50,5 @@ public class AmmoPickUp : NetworkBehaviour {
         // that player takes damage
         go.GetComponent<GunScript>().addAmmo(amount);
     }//End of CmdTellServerWhoGotAmmo
-
-    //[Command]
-    //void CmdTellServerWhoGotAmmoPack(string id, int amount2) {
-    //    print("I GO HERE");
-    //    GameObject go = GameObject.Find(id);
-
-    //    go.GetComponent<Inventory>().AddAmmoPack(amount2);
-    //}//End of CmdTellServerWhoGotAmmoPack
 
 }//End of AmmoPickUP

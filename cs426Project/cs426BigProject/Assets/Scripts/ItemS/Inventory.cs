@@ -13,10 +13,6 @@ public class Inventory : NetworkBehaviour {
     public Text woodDisplay;
     public GameObject woodItem;
 
-    //Ammo Pack Variables
-    [SyncVar(hook = "OnChangedAmmoPack")] private int AmmoPackAmount = 0;
-    //public Text AmmoPackDisplay;
-
     //Health Pack Variables
     //Ammo Pack Variables
     [SyncVar(hook = "OnChangedHealthPack")] private int HealthPackAmount = 0;
@@ -25,7 +21,6 @@ public class Inventory : NetworkBehaviour {
     // Start is called before the first frame update
     void Start()
     {
-        //ChangeAmmoPackText();
         ChangeWoodText();
         ChangeHealthPackText();
 
@@ -55,31 +50,6 @@ public class Inventory : NetworkBehaviour {
     {
         woodAmount += amount;
     }
-
-    /// <summary>
-    /// Changes the ammo pack text.
-    /// </summary>
-
-    //// changes text of ammo pack count
-    //public void ChangeAmmoPackText() {
-
-    //    if (isLocalPlayer) {
-    //        // changes the number of ammo pack item to display
-    //        AmmoPackDisplay.GetComponent<Text>().text = "Ammo Pack: " + AmmoPackAmount;
-    //    }
-    //}
-
-    //// update ammo pack count of player
-    //public void OnChangedAmmoPack(int amount2) {
-    //    AmmoPackAmount = amount2;
-
-    //    ChangeAmmoPackText();
-    //}
-
-    //// give ammo pack item to player
-    //public void AddAmmoPack(int amount2) {
-    //    AmmoPackAmount += amount2;
-    //}
 
     /// <summary>
     /// Changes the health pack text.

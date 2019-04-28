@@ -1,11 +1,12 @@
 ﻿<Properties StartupConfiguration="{8B0606AA-BBD0-1977-A688-B62A8DA50C93}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemS/AmmoPickUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/ItemS/Inventory.cs">
     <Files>
       <File FileName="Assets/Scripts/PickUpState.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/ItemS/AmmoPickUp.cs" Line="57" Column="1" />
+      <File FileName="Assets/Scripts/ItemS/AmmoPickUp.cs" Line="35" Column="44" />
       <File FileName="Assets/Scripts/ItemS/WoodPickUp.cs" Line="27" Column="1" />
       <File FileName="Assets/Scripts/ItemS/HealthPickUp.cs" Line="28" Column="51" />
-      <File FileName="Assets/Scripts/ItemS/Inventory.cs" Line="63" Column="1" />
+      <File FileName="Assets/Scripts/ItemS/Inventory.cs" Line="23" Column="6" />
+      <File FileName="Assets/Scripts/PlayerScripts/Stamina.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,7 +16,7 @@
               <Node name="ReadMe" expanded="True" />
               <Node name="Scripts" expanded="True">
                 <Node name="ItemS" expanded="True">
-                  <Node name="AmmoPickUp.cs" selected="True" />
+                  <Node name="Inventory.cs" selected="True" />
                 </Node>
                 <Node name="PlayerScripts" expanded="True" />
                 <Node name="TerrainScripts" expanded="True" />
@@ -29,7 +30,7 @@
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="c226823f-26f1-4a02-8bae-01fd47e221ec" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="0a04c90a-5754-4d41-be5f-774c2e5453c1" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
