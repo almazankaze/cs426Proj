@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class miniEnemy : NetworkBehaviour
 {
-    public GameObject player;
+    public GameObject[] players;
     public float movementSpeed = 7.0f;
     private Animator anim;
 
@@ -16,21 +16,57 @@ public class miniEnemy : NetworkBehaviour
         anim = GetComponent<Animator>();
         anim.speed = 1.2f;
 
-        player = GameObject.FindGameObjectWithTag("Player");
+        players = GameObject.FindGameObjectsWithTag("Player");
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
-        // keep looking at player
-        Vector3 lookTarget = new Vector3(player.transform.position.x, transform.position.y, player.transform.position.z);
-        transform.LookAt(lookTarget);
+        if (players.Length < 2)
+        {
+            // keep looking at player
+            Vector3 lookTarget = new Vector3(players[0].transform.position.x, transform.position.y, players[0].transform.position.z);
+            transform.LookAt(lookTarget);
 
-        // move towards player
-        transform.position += transform.forward * movementSpeed * Time.deltaTime;
+            // move towards player
+            transform.position += transform.forward * movementSpeed * Time.deltaTime;
 
-        anim.SetFloat("velocity", movementSpeed);
+            anim.SetFloat("velocity", movementSpeed);
+
+        }
+
+        else
+        {
+            float dist1 = Vector3.Distance(players[0].transform.position, transform.position);
+            float dist2 = Vector3.Distance(players[1].transform.position, transform.position);
+
+            if (dist1 <= dist2)
+            {
+                // keep looking at player
+                Vector3 lookTarget = new Vector3(players[0].transform.position.x, transform.position.y, players[0].transform.position.z);
+                transform.LookAt(lookTarget);
+
+                // move towards player
+                transform.position += transform.forward * movementSpeed * Time.deltaTime;
+
+                anim.SetFloat("velocity", movementSpeed);
+
+            }
+
+            else
+            {
+                // keep looking at player
+                Vector3 lookTarget = new Vector3(players[1].transform.position.x, transform.position.y, players[1].transform.position.z);
+                transform.LookAt(lookTarget);
+
+                // move towards player
+                transform.position += transform.forward * movementSpeed * Time.deltaTime;
+
+                anim.SetFloat("velocity", movementSpeed);
+
+            }
+        }
 
     }//End of update function
 }

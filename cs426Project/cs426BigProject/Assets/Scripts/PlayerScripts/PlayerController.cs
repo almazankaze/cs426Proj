@@ -92,7 +92,7 @@ public class PlayerController : NetworkBehaviour
             currentSpeed = 0;
 
         // if run key is pressed, currentSpeed is now runSpeed
-        else if (running)
+        else if (running && myStamina.GetStamina() > 0)
             currentSpeed = Mathf.Lerp(currentSpeed, runSpeed, Time.deltaTime * runSpeedBuildUp);
 
         // is walking
